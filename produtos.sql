@@ -1,5 +1,5 @@
-CREATE DATABASE produtos_db;
-USE produtos_db;
+CREATE DATABASE produtos;
+USE produtos;
 
 -- tbl_categoria
 CREATE TABLE tbl_categoria (
@@ -35,13 +35,13 @@ CREATE TABLE tbl_endereco (
 
 -- tbl_cliente
 CREATE TABLE tbl_cliente (
-    codigo INT AUTO_INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     telefone VARCHAR(12),
     nome VARCHAR(100),
     limite FLOAT,
     id_endereco INT,
     status VARCHAR(10) DEFAULT 'ruim' CHECK (status IN ('bom', 'médio', 'ruim')),
-    FOREIGN KEY (id_endereco) REFERENCES tbl_endereco(id),
+    FOREIGN KEY (id_endereco) REFERENCES tbl_endereco(id)
 );
 
 
