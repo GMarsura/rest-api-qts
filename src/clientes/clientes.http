@@ -1,0 +1,15 @@
+### List clientes
+GET http://localhost:3000/firma/1.0.0/clientes
+
+### Get cliente
+GET http://localhost:3000/firma/1.0.0/clientes/2
+
+
+### Add cliente
+POST http://localhost:3000/firma/1.0.0/clientes
+
+### Update cliente
+PATCH http://localhost:3000/firma/1.0.0/clientes/1
+
+### delete cliente
+DELETE http://localhost:3000/firma/1.0.0/clientes/1
