@@ -3,5 +3,5 @@ export declare class CreateClienteDto {
     nome: string;
     limite: number;
     id_endereco: number;
-    id_status: number;
+    status: string;
 }

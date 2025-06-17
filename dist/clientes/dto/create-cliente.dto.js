@@ -16,7 +16,7 @@ class CreateClienteDto {
 exports.CreateClienteDto = CreateClienteDto;
 __decorate([
     (0, class_validator_1.IsString)(),
-    (0, class_validator_1.Matches)(/^\d{11}$/, { message: 'O telefone deve conter exatamente 11 dígitos numéricos' }),
+    (0, class_validator_1.IsNotEmpty)(),
     __metadata("design:type", String)
 ], CreateClienteDto.prototype, "telefone", void 0);
 __decorate([
@@ -26,14 +26,18 @@ __decorate([
 ], CreateClienteDto.prototype, "nome", void 0);
 __decorate([
     (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsNotEmpty)(),
     __metadata("design:type", Number)
 ], CreateClienteDto.prototype, "limite", void 0);
 __decorate([
     (0, class_validator_1.IsInt)(),
+    (0, class_validator_1.IsNotEmpty)(),
     __metadata("design:type", Number)
 ], CreateClienteDto.prototype, "id_endereco", void 0);
 __decorate([
-    (0, class_validator_1.IsInt)(),
-    __metadata("design:type", Number)
-], CreateClienteDto.prototype, "id_status", void 0);
+    (0, class_validator_1.IsNotEmpty)(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.IsIn)(['bom', 'ruim', 'médio'], { message: 'O valor deve ser "bom", "ruim" ou "médio".' }),
+    __metadata("design:type", String)
+], CreateClienteDto.prototype, "status", void 0);
 //# sourceMappingURL=create-cliente.dto.js.map

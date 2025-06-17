@@ -29,13 +29,13 @@ let ClientesService = class ClientesService {
         return this.repository.find();
     }
     findOne(id) {
-        return this.repository.findOne({ where: { codigo: id } });
+        return this.repository.findOne({ where: { id: id } });
     }
     update(id, dto) {
-        return this.repository.update({ codigo: id }, dto);
+        return this.repository.update({ id: id }, dto);
     }
     remove(id) {
-        return this.repository.delete({ codigo: id });
+        return this.repository.delete({ id: id });
     }
 };
 exports.ClientesService = ClientesService;

@@ -1,9 +1,9 @@
-import { IsInt, IsString, IsNumber, IsNotEmpty, IsOptional, Matches, Length } from 'class-validator';
+import { IsInt, IsString, IsNumber, IsNotEmpty, IsIn} from 'class-validator';
 
 export class CreateClienteDto {
 
   @IsString()
-  @Matches(/^\d{11}$/, { message: 'O telefone deve conter exatamente 11 dígitos numéricos' })
+  @IsNotEmpty()
   telefone: string;
 
   @IsString()
@@ -11,11 +11,16 @@ export class CreateClienteDto {
   nome: string;
 
   @IsNumber()
+  @IsNotEmpty()
   limite: number;
 
   @IsInt()
+  @IsNotEmpty()
   id_endereco: number;
 
-  @IsInt()
-  id_status: number;
+
+  @IsNotEmpty()
+  @IsString()
+  @IsIn(['bom', 'ruim', 'médio'], { message: 'O valor deve ser "bom", "ruim" ou "médio".' })
+  status: string;
 }

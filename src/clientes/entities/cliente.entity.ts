@@ -3,8 +3,8 @@ import { Column , Entity, PrimaryGeneratedColumn} from "typeorm";
 @Entity('tbl_cliente')
 export class Cliente {
       
-      @PrimaryGeneratedColumn({ name: 'id_team' })
-      codigo: number;
+      @PrimaryGeneratedColumn()
+      id: number;
     
       @Column()
       telefone: string;
@@ -19,5 +19,5 @@ export class Cliente {
       id_endereco: number;
     
       @Column()
-      id_status: number;
+      status: string;
 }

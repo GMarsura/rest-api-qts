@@ -23,14 +23,14 @@ export class ClientesService {
   }
 
   findOne(id: number) {
-    return this.repository.findOne({ where: { codigo: id } });
+    return this.repository.findOne({ where: { id: id } });
   }
 
   update(id: number, dto: UpdateClienteDto) {
-    return this.repository.update({ codigo: id }, dto);
+    return this.repository.update({ id: id }, dto);
   }
 
   remove(id: number) {
-    return this.repository.delete({ codigo: id });
+    return this.repository.delete({ id: id });
   }
 }

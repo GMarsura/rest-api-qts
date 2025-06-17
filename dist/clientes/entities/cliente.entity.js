@@ -15,9 +15,9 @@ let Cliente = class Cliente {
 };
 exports.Cliente = Cliente;
 __decorate([
-    (0, typeorm_1.PrimaryGeneratedColumn)({ name: 'id_team' }),
+    (0, typeorm_1.PrimaryGeneratedColumn)(),
     __metadata("design:type", Number)
-], Cliente.prototype, "codigo", void 0);
+], Cliente.prototype, "id", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
@@ -36,8 +36,8 @@ __decorate([
 ], Cliente.prototype, "id_endereco", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
-    __metadata("design:type", Number)
-], Cliente.prototype, "id_status", void 0);
+    __metadata("design:type", String)
+], Cliente.prototype, "status", void 0);
 exports.Cliente = Cliente = __decorate([
     (0, typeorm_1.Entity)('tbl_cliente')
 ], Cliente);
